@@ -1,6 +1,6 @@
-const form_study = document.querySelector("study-input");
-const IStudy = form.querySelector("input");
-const output = document.querySelector("study-output");
+const form_study = document.querySelector(".study-input");
+const IStudy = form_study.querySelector("input");
+const output = document.querySelector(".study-output");
 
 function StudyList(text){
   const li = document.createElement("li");
@@ -12,12 +12,12 @@ function StudyList(text){
 
 function submit(event){
   event.preventDefault();
-  const now = input.value;
+  const now = IStudy.value;
   StudyList(now);
-  input.value="";
+  IStudy.value="";
 }
 
 function init(){
-  form.addEventListener("submit",submit);
+  form_study.addEventListener("submit",submit);
 }
 init();
