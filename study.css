@@ -2,12 +2,15 @@
     font-family: 'specialSerif';
     src: url('font/A.TTF') format('opentype');
 }
+@font-face {
+    font-family: 'handwriting';
+    src: url('font/BagindaScript.otf') format('opentype');
+}
 
 body {
-    /*background-color: #8d5c3c;
-    background-image: url('image/study_background.jpg');
+    background-image: url('image/kelly-sikkema-00W-CT_859o-unsplash.jpg');
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 
 .titleBox {
@@ -18,15 +21,62 @@ body {
     justify-content: center;
 }
 
- .title {
-    /* font-family: specialSerif;
-    color: #fad9c8;
+ #big-title {
+    font-family: handwriting;
+    color: #141414;
     white-space : pre;
-    max-width: 100px;
-    font-size: 50px;
-    font-weight: bold; */
+    max-width: 100%;
+    font-size: 60px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 40px;
 } 
 
-#study {
-    width: 100%; 
-}
+ ul {
+    list-style: none;
+    text-align: left;
+    float: left;
+    margin: 0;
+ }
+ 
+ .LiBtn {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .study-output {
+    font-family:sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #525252
+ }
+ #inputBox {
+    /* border: none; */
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:thin;
+    background: transparent;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50%;
+ }
+ input:focus{
+     outline: none;
+ }
+
+ .btn {
+ }
+ .btnClass {
+     padding: 0 0 0 80px;
+ }
+
+ span {
+    padding: 0 0 0 80px;
+ }
+
+ /* input::placeholder{
+     font-family: serif;
+     color: #808080;
+     font-weight: bold;
+ } */

@@ -4,14 +4,22 @@ const output = document.querySelector(".study-output");
 var review = document.querySelector("button");
 
 function StudyList(text){
+  const div1 = document.createElement("div");
+  const div2 = document.createElement("div");
+  const div3 = document.createElement("div");
   const li = document.createElement("li");
   const span = document.createElement("span");
   const button = document.createElement("button");
   button.classList.add("btn")
+  div2.classList.add("btnClass")
+  div3.classList.add("LiBtn");
   span.innerText = text;
+  div1.appendChild(li);
   li.appendChild(span);
-  output.appendChild(li);
-  output.appendChild(button);
+  div2.appendChild(button);
+  div3.appendChild(div1);
+  div3.appendChild(div2);
+  output.appendChild(div3);
   // document.getElementsByTagName("button").onclick = function () {
   //   alert('I\'m clicked!');
   //};
