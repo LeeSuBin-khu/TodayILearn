@@ -13,15 +13,23 @@ body {
     background-size: cover;
 }
 
-.bg-image {
+body::before { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
     background-image: url("image/bg.jpg");
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    -webkit-filter: blur(5px); 
+    -moz-filter: blur(5px); 
+    -o-filter: blur(5px); 
+    -ms-filter: blur(5px); 
+    filter: blur(5px); 
+    z-index: -1; 
+    content: ""; 
 }
+
 
 .titleBox {
     width: 100%; 
