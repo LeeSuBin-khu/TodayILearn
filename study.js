@@ -53,5 +53,6 @@ init();
 // review.addEventListener("click", console.log("asdf"))
 
 $(document).on("click", ".btn", function() {
+  document.body.style.filter = blur;
   alert("버튼을 클릭");
 });
