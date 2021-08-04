@@ -21,7 +21,7 @@ function Create(event) {
 function Read() {
   var list = "";
   for(var i=0; i<inputList.length; i++) {
-    list+="<li>"+inputList[i]+"<span class='ReviewBtn' id="+i+">"+"</span></li>";
+    list+="<li>"+inputList[i]+"<span class='ReviewBtn' id="+i+">"+"→"+"</span></li>";
   }
   document.querySelector(".output").innerHTML=list;
 
@@ -32,6 +32,7 @@ function Read() {
 }
 
 function Delete() {
+  document.querySelector(".main").classList.toggle('blur');
   var i = this.getAttribute("id");
   inputList.splice(i, 1);
   Read()
