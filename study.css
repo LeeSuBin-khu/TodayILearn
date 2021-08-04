@@ -47,6 +47,9 @@ body.blur::before {
     content: ""; 
 }
 
+ h1.title1 {
+     content: "어떤 내용을 배웠나요?";
+ }
 
 .titleBox {
     width: 100%; 
@@ -56,7 +59,7 @@ body.blur::before {
     justify-content: center;
 }
 
- #big-title {
+ /* #big-title {
     font-family: handwriting;
     color: #141414;
     white-space : pre;
@@ -65,7 +68,7 @@ body.blur::before {
     font-weight: 550;
     text-align: center;
     line-height: 40px;
-} 
+}  */
 
  ul {
     list-style: none;

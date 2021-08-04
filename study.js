@@ -31,8 +31,27 @@ function Read() {
   }
 }
 
+function Review1() {
+  document.querySelector(".main").classList.add('blur');
+  document.getElementById("big-title").innerHTML='오늘은 어떤 것을 배웠나요?';
+  document.querySelector("form").addEventListener("submit", Review2);
+}
+
+function Review2(event) {
+  event.preventDefault();
+  document.getElementById("big-title").innerHTML='어떤 것이 중요한가요?';
+  document.querySelector("form").addEventListener("submit", Main);
+}
+
+function Main(event) {
+  event.preventDefault();
+  document.getElementById("big-title").innerHTML="Today's Study";
+  document.querySelector(".main").classList.remove('blur');
+  document.getElementById("big-title").addEventListener("click", Read)
+}
+
 function Delete() {
-  document.querySelector(".main").classList.toggle('blur');
+  Review1();
   var i = this.getAttribute("id");
   inputList.splice(i, 1);
   Read()
