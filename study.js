@@ -6,7 +6,7 @@
 'use strict';
 
 var inputList = [];
-document.querySelector("form").addEventListener("submit", Create);
+document.querySelector(".studyList").addEventListener("submit", Create);
 
 function Create(event) {
   event.preventDefault();
@@ -32,13 +32,16 @@ function Read() {
 }
 
 function Review1() {
+  document.querySelector(".nextBtn-F").classList.add("nextBtn-T");
   document.querySelector(".main").classList.add('blur');
+  document.querySelector(".OutputBox").classList.add('OutputBox-F');
   document.getElementById("big-title").innerHTML='오늘은 어떤 것을 배웠나요?';
   document.querySelector("form").addEventListener("submit", Review2);
 }
 
 function Review2(event) {
   event.preventDefault();
+  var nextBtn = "";//문제 넘어가는 버튼 만들자
   document.getElementById("big-title").innerHTML='어떤 것이 중요한가요?';
   document.querySelector("form").addEventListener("submit", Main);
 }
@@ -47,6 +50,8 @@ function Main(event) {
   event.preventDefault();
   document.getElementById("big-title").innerHTML="Today's Study";
   document.querySelector(".main").classList.remove('blur');
+  document.querySelector(".nextBtn-F").classList.remove("nextBtn-T");
+  document.querySelector(".OutputBox").classList.remove('OutputBox-F');
   document.getElementById("big-title").addEventListener("click", Read)
 }
 

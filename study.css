@@ -59,6 +59,14 @@ body.blur::before {
     justify-content: center;
 }
 
+.nextBtn-F {
+    display: none;
+}
+
+.nextBtn-T {
+    display: block;
+}
+
  /* #big-title {
     font-family: handwriting;
     color: #141414;
@@ -69,6 +77,14 @@ body.blur::before {
     text-align: center;
     line-height: 40px;
 }  */
+
+.OutputBox {
+    display: block;
+}
+
+.OutputBox-F {
+    display: none;
+}
 
  ul {
     list-style: none;
