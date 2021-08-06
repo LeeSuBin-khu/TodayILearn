@@ -1,73 +1,69 @@
-@font-face {
-    font-family: 'specialSerif';
-    src: url('font/A.TTF') format('opentype');
-}
-@font-face {
-    font-family: 'handwriting';
-    src: url('font/BagindaScript.otf') format('opentype');
-}
-
 body {
     background-image: url('image/kelly-sikkema-00W-CT_859o-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-body.main::before { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    background-image: url("image/bg.jpg");
-    background-size: cover; 
-    /* -webkit-filter: blur(5px); 
-    -moz-filter: blur(5px); 
-    -o-filter: blur(5px); 
-    -ms-filter: blur(5px); 
-    filter: blur(5px);  */
-    z-index: -1; 
-    content: ""; 
-}
-
-body.blur::before { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    background-image: url("image/bg.jpg");
-    background-size: cover; 
-    -webkit-filter: blur(5px); 
-    -moz-filter: blur(5px); 
-    -o-filter: blur(5px); 
-    -ms-filter: blur(5px); 
-    filter: blur(5px); 
-    z-index: -1; 
-    content: ""; 
-}
-
- h1.title1 {
-     content: "어떤 내용을 배웠나요?";
- }
-
-.titleBox {
+.TodoList {
     width: 100%; 
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.nextBtn-F {
-    display: none;
+#big-title {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 250%;
 }
 
-.nextBtn-T {
-    display: block;
-}
+ ul {
+    list-style: none;
+    text-align: left;
+    float: left;
+    margin: 0;
+    padding-top: 30px;
+    line-height: 0px;
+ }
 
- /* #big-title {
+ .output {
+    font-family:sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #555555
+ }
+
+ .input {
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:thin;
+    background: transparent;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50%;
+ }
+
+ input:focus{
+     outline: none;
+ }
+
+ span {
+    padding: 0 0 0 80px;
+    line-height: 27px;
+ }
+
+
+
+ /* input::placeholder{
+     font-family: serif;
+     color: #808080;
+     font-weight: bold;
+ } */
+
+  /* #big-title {
     font-family: handwriting;
     color: #141414;
     white-space : pre;
@@ -78,61 +74,11 @@ body.blur::before {
     line-height: 40px;
 }  */
 
-.OutputBox {
-    display: block;
+/* @font-face {
+    font-family: 'specialSerif';
+    src: url('font/A.TTF') format('opentype');
 }
-
-.OutputBox-F {
-    display: none;
-}
-
- ul {
-    list-style: none;
-    text-align: left;
-    float: left;
-    margin: 0;
-    line-height: 0px;
- }
- 
- .LiBtn {
-    display: flex;
-    justify-content: space-between;
- }
-
- .study-output {
-    font-family:sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    color: #525252
- }
- #inputBox {
-    /* border: none; */
-    border-left-width:0;
-    border-right-width:0;
-    border-top-width:0;
-    border-bottom-width:thin;
-    background: transparent;
-    text-align: center;
-    font-size: 18px;
-    line-height: 50%;
- }
- input:focus{
-     outline: none;
- }
-
- .btn {
- }
- .btnClass {
-     padding: 0 0 0 80px;
- }
-
- span {
-    padding: 0 0 0 80px;
-    line-height: 27px;
- }
-
- /* input::placeholder{
-     font-family: serif;
-     color: #808080;
-     font-weight: bold;
- } */
+@font-face {
+    font-family: 'handwriting';
+    src: url('font/BagindaScript.otf') format('opentype');
+} */

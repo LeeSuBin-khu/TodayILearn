@@ -5,7 +5,6 @@
 
 'use strict';
 
-var inputList = [];
 let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
 localStorage.setItem('items', JSON.stringify(inputLocal));
 let item = JSON.parse(localStorage.getItem('items'));
@@ -16,7 +15,6 @@ function Create(event) {
   event.preventDefault();
   var input = document.querySelector(".input").value;
   if(input!=null) {
-    inputList.push(input);
     inputLocal.push(input);
     localStorage.setItem('items', JSON.stringify(inputLocal));
     item = JSON.parse(localStorage.getItem('items'));
@@ -42,98 +40,11 @@ function NextPage() {
   location.href = "page/question.html";
 }
 
-function Review1() {
-  NextPage();
-}
-
 function Delete() {
-  Review1();
+  NextPage();
   var i = this.getAttribute("id");
-  inputList.splice(i, 1);
   item.splice(i,1);
   inputLocal = item;
   localStorage.setItem('items', JSON.stringify(inputLocal));
   Read()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const form_study = document.querySelector(".study-input");
-// const IStudy = form_study.querySelector("input");
-// const output = document.querySelector(".study-output");
-// var review = document.querySelector("button");
-
-// function StudyList(text){
-//   const div1 = document.createElement("div");
-//   const div2 = document.createElement("div");
-//   const div3 = document.createElement("div");
-//   const li = document.createElement("li");
-//   const span = document.createElement("span");
-//   const button = document.createElement("button");
-//   button.classList.add("btn")
-//   div2.classList.add("btnClass")
-//   div3.classList.add("LiBtn");
-//   span.innerText = text;
-//   div1.appendChild(li);
-//   li.appendChild(span);
-//   div2.appendChild(button);
-//   div3.appendChild(div1);
-//   div3.appendChild(div2);
-//   output.appendChild(div3);
-//   // document.getElementsByTagName("button").onclick = function () {
-//   //   alert('I\'m clicked!');
-//   //};
-// }
-
-// function submit(event){
-//   event.preventDefault();
-//   const now = IStudy.value;
-//   StudyList(now);
-
-//   var ReviewBtn = document.querySelectorAll(".btn");
-//   for (var i=0; i<ReviewBtn.length; i++) {
-//     goReview[i].addEventListener("click", GoReview);
-//   }
-//   // if(StudyList(now)==true) {
-//   //   document.querySelector(".btn").addEventListener("click", console.log("asdf"))
-//   // }
-//   IStudy.value="";
-// }
-
-// // function ReviewButton(){
-// //   window.onload = function() {
-// //   var review = document.querySelector("button");
-// //   review.onclick=function(){
-// //     console.log("asdf")
-// //     alert("click!")
-// //   }
-// // }
-// // }
-
-
-// function init(){
-//   form_study.addEventListener("submit",submit);
-// }
-// init();
-// // review.addEventListener("click", console.log("asdf"))
-
-// function GoReview() {
- 
-// }
-
-// $(document).on("click", ".btn", function() {
-//   document.styleSheets[0].addRule('body.blur::before',
-//   "-webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);");
-//   alert("버튼을 클릭");
-// });

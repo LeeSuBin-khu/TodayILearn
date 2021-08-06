@@ -1,0 +1,55 @@
+body {
+    background-image: url('../image/kelly-sikkema-00W-CT_859o-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::before { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-image: url("../image/kelly-sikkema-00W-CT_859o-unsplash.jpg");
+    background-size: cover; 
+    -webkit-filter: blur(5px); 
+    -moz-filter: blur(5px); 
+    -o-filter: blur(5px); 
+    -ms-filter: blur(5px); 
+    filter: blur(5px); 
+    z-index: -1; 
+    content: ""; 
+}
+
+.Question1 {
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Q1 {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 250%;
+}
+
+textarea {
+    width:500px; 
+	height:100px;
+    resize:none;
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:thin;
+    background: transparent;
+    text-align: center;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+textarea:focus{
+    outline: none;
+}
