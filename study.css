@@ -76,9 +76,13 @@ body.night {
     line-height: 27px;
  }
 
- #night {
-    float:right; 
-    padding-right: 5%;
+ .Night {
+    color:black;
+    font-size: 150%;
+ }
+
+ .Day {
+     color: white;
  }
 
  /* input::placeholder{

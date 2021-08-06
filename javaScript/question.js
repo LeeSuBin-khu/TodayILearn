@@ -1,6 +1,16 @@
+let classLocal = JSON.parse(localStorage.getItem('modes'));
+
 function GoMain() {
     location.href="../study.html"
 }
+
+function NightAndDay() {
+    if(classLocal=="main") {
+     document.getElementById("Q1").style.color="white";
+     document.querySelector(".main").classList.toggle("night");
+    }
+ }
+ 
 
 function NextQuestion() {
     document.getElementById("Q1").innerHTML="중요한 내용이나 기억해야 할 내용이 있나요?";
@@ -10,3 +20,4 @@ function NextQuestion() {
 }
 
 document.querySelector(".nextBtn").addEventListener("click", NextQuestion);
+NightAndDay()

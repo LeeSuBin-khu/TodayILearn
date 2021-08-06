@@ -8,6 +8,10 @@
 let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
 localStorage.setItem('items', JSON.stringify(inputLocal));
 let item = JSON.parse(localStorage.getItem('items'));
+
+let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"main night";
+localStorage.setItem('modes', JSON.stringify(classLocal));
+let BodyClassName = JSON.parse(localStorage.getItem('modes'));
 document.querySelector(".studyList").addEventListener("submit", Create);
 Read();
 
@@ -50,9 +54,13 @@ function Delete() {
 }
 
 function NightAndDay() {
+  classLocal=document.querySelector("body").classList.value;
+  localStorage.setItem('modes', JSON.stringify(classLocal));
+  BodyClassName = JSON.parse(localStorage.getItem('modes'));
   document.querySelector(".dayTitle").classList.toggle("nightTitle");
   document.querySelector(".main").classList.toggle("night");
   document.querySelector(".output").classList.toggle("output-night");
+  document.querySelector(".Night").classList.toggle("Day");
 }
 
 document.querySelector(".Night").addEventListener("click", NightAndDay);
