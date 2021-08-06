@@ -48,3 +48,10 @@ function Delete() {
   localStorage.setItem('items', JSON.stringify(inputLocal));
   Read()
 }
+
+function NightAndDay() {
+  document.querySelector(".dayTitle").classList.toggle("nightTitle");
+  document.querySelector(".main").classList.toggle("night");
+}
+
+document.querySelector(".Night").addEventListener("click", NightAndDay);

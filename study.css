@@ -1,5 +1,11 @@
-body {
+body.main {
     background-image: url('image/kelly-sikkema-00W-CT_859o-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.night {
+    background-image: url('image/patrick-mueller-e8kl4Vo3T4Y-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -17,6 +23,14 @@ body {
     font-family: serif;
     font-weight: normal;
     font-size: 250%;
+}
+
+.dayTitle {
+    color: black;
+}
+
+.nightTitle {
+    color: white;
 }
 
  ul {
@@ -55,7 +69,10 @@ body {
     line-height: 27px;
  }
 
-
+ #night {
+    float:right; 
+    padding-right: 5%;
+ }
 
  /* input::placeholder{
      font-family: serif;
