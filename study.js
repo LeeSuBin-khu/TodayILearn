@@ -6,6 +6,9 @@
 'use strict';
 
 var inputList = [];
+let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
+localStorage.setItem('items', JSON.stringify(inputLocal));
+const item = JSON.parse(localStorage.getItem('items'));
 document.querySelector(".studyList").addEventListener("submit", Create);
 
 function Create(event) {
@@ -13,6 +16,8 @@ function Create(event) {
   var input = document.querySelector(".input").value;
   if(input!=null) {
     inputList.push(input);
+    inputLocal.push(input);
+    localStorage.setItem('items', JSON.stringify(inputLocal));
     document.querySelector(".input").value = "";
   }
   Read();
@@ -20,8 +25,8 @@ function Create(event) {
 
 function Read() {
   var list = "";
-  for(var i=0; i<inputList.length; i++) {
-    list+="<li>"+inputList[i]+"<span class='ReviewBtn' id="+i+">"+"→"+"</span></li>";
+  for(var i=0; i<inputLocal.length; i++) {
+    list+="<li>"+inputLocal[i]+"<span class='ReviewBtn' id="+i+">"+"→"+"</span></li>";
   }
   document.querySelector(".output").innerHTML=list;
 
