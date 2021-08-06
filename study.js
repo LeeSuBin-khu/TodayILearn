@@ -10,6 +10,7 @@ let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('
 localStorage.setItem('items', JSON.stringify(inputLocal));
 const item = JSON.parse(localStorage.getItem('items'));
 document.querySelector(".studyList").addEventListener("submit", Create);
+Read();
 
 function Create(event) {
   event.preventDefault();
@@ -42,33 +43,15 @@ function NextPage() {
 
 function Review1() {
   NextPage();
-  // document.querySelector(".nextBtn-F").classList.add("nextBtn-T");
-  // document.querySelector(".main").classList.add('blur');
-  // document.querySelector(".OutputBox").classList.add('OutputBox-F');
-  // document.getElementById("big-title").innerHTML='오늘은 어떤 것을 배웠나요?';
-  // document.querySelector("form").addEventListener("submit", Review2);
-}
-
-function Review2(event) {
-  event.preventDefault();
-
-  document.getElementById("big-title").innerHTML='어떤 것이 중요한가요?';
-  document.querySelector("form").addEventListener("submit", Main);
-}
-
-function Main(event) {
-  event.preventDefault();
-  document.getElementById("big-title").innerHTML="Today's Study";
-  document.querySelector(".main").classList.remove('blur');
-  document.querySelector(".nextBtn-F").classList.remove("nextBtn-T");
-  document.querySelector(".OutputBox").classList.remove('OutputBox-F');
-  document.getElementById("big-title").addEventListener("click", Read)
 }
 
 function Delete() {
   Review1();
   var i = this.getAttribute("id");
   inputList.splice(i, 1);
+  item.splice(i,1);
+  inputLocal = item;
+  localStorage.setItem('items', JSON.stringify(inputLocal));
   Read()
 }
 
