@@ -46,7 +46,14 @@ body.night {
     font-family:sans-serif;
     font-weight: normal;
     font-size: 20px;
-    color: #555555
+    color: #555555;
+ }
+
+ .output-night {
+    font-family:sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #a7a7a7;
  }
 
  .input {

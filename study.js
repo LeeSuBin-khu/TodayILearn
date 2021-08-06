@@ -52,6 +52,7 @@ function Delete() {
 function NightAndDay() {
   document.querySelector(".dayTitle").classList.toggle("nightTitle");
   document.querySelector(".main").classList.toggle("night");
+  document.querySelector(".output").classList.toggle("output-night");
 }
 
 document.querySelector(".Night").addEventListener("click", NightAndDay);
