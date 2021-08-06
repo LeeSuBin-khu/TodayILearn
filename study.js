@@ -8,7 +8,7 @@
 var inputList = [];
 let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
 localStorage.setItem('items', JSON.stringify(inputLocal));
-const item = JSON.parse(localStorage.getItem('items'));
+let item = JSON.parse(localStorage.getItem('items'));
 document.querySelector(".studyList").addEventListener("submit", Create);
 Read();
 
@@ -19,6 +19,7 @@ function Create(event) {
     inputList.push(input);
     inputLocal.push(input);
     localStorage.setItem('items', JSON.stringify(inputLocal));
+    item = JSON.parse(localStorage.getItem('items'));
     document.querySelector(".input").value = "";
   }
   Read();
