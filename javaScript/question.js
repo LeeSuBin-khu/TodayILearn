@@ -5,7 +5,7 @@ function GoMain() {
 }
 
 function NightAndDay() {
-    if(classLocal=="main") {
+    if(classLocal=="d n") {
      document.getElementById("Q1").style.color="white";
      document.querySelector(".main").classList.toggle("night");
     }

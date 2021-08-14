@@ -9,9 +9,6 @@ let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('
 localStorage.setItem('items', JSON.stringify(inputLocal));
 let item = JSON.parse(localStorage.getItem('items'));
 
-let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"main night";
-localStorage.setItem('modes', JSON.stringify(classLocal));
-let BodyClassName = JSON.parse(localStorage.getItem('modes'));
 document.querySelector(".studyList").addEventListener("submit", Create);
 Read();
 
@@ -28,6 +25,7 @@ function Create(event) {
 }
 
 function Read() {
+  LocalMode()
   var list = "";
   for(var i=0; i<inputLocal.length; i++) {
     list+="<li>"+inputLocal[i]+"<span class='ReviewBtn' id="+i+">"+"→"+"</span></li>";
@@ -54,13 +52,38 @@ function Delete() {
 }
 
 function NightAndDay() {
-  classLocal=document.querySelector("body").classList.value;
+  document.querySelector(".d").classList.toggle("n");
+  let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"";
+  // document.querySelector(".dayTitle").classList.toggle("nightTitle");
+  // document.querySelector(".main").classList.toggle("night");
+  // document.querySelector(".output").classList.toggle("output-night");
+  // document.querySelector(".Night").classList.toggle("Day");
+  classLocal=document.querySelector(".d").classList.value;
   localStorage.setItem('modes', JSON.stringify(classLocal));
-  BodyClassName = JSON.parse(localStorage.getItem('modes'));
-  document.querySelector(".dayTitle").classList.toggle("nightTitle");
-  document.querySelector(".main").classList.toggle("night");
-  document.querySelector(".output").classList.toggle("output-night");
-  document.querySelector(".Night").classList.toggle("Day");
+  //let BodyClassName = JSON.parse(localStorage.getItem('modes'));
+  //BodyClassName = JSON.parse(localStorage.getItem('modes'));
+  LocalMode();
 }
 
 document.querySelector(".Night").addEventListener("click", NightAndDay);
+
+
+// let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"";
+// localStorage.setItem('modes', JSON.stringify(classLocal));
+// let BodyClassName = JSON.parse(localStorage.getItem('modes'));
+
+function LocalMode() {
+  //let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"d";
+  let BodyClassName = JSON.parse(localStorage.getItem('modes'));
+  if(BodyClassName === "d n") {
+    document.querySelector(".dayTitle").classList.add("nightTitle");
+    document.querySelector(".main").classList.add("night");
+    document.querySelector(".output").classList.add("output-night");
+    document.querySelector(".Night").classList.add("Day");
+  } else {
+    document.querySelector(".dayTitle").classList.remove("nightTitle");
+    document.querySelector(".main").classList.remove("night");
+    document.querySelector(".output").classList.remove("output-night");
+    document.querySelector(".Night").classList.remove("Day");
+  }
+}
