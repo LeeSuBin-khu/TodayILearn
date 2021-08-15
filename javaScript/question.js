@@ -5,9 +5,10 @@ function GoMain() {
 }
 
 function NightAndDay() {
-    if(classLocal=="d n") {
+    if(classLocal=="day night") {
      document.getElementById("Q1").style.color="white";
-     document.querySelector(".main").classList.toggle("night");
+     document.querySelector(".main").classList.add("night");
+     document.querySelector("textarea").style.color="white";
     }
  }
  

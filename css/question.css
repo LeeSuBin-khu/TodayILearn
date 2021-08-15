@@ -44,7 +44,7 @@ body.night::before {
     content: ""; 
 }
 
-.Question1 {
+.Question {
     width: 100%; 
     height: 100vh;
     display: flex;

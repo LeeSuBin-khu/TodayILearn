@@ -3,6 +3,8 @@
 // 3. 복습페이지가 끝나면 다시 메인화면으로 넘어오기
 // 4. 메인화면에 공부 제거하기(Delete)
 
+(function () {
+
 'use strict';
 
 let inputLocal = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
@@ -52,38 +54,37 @@ function Delete() {
 }
 
 function NightAndDay() {
-  document.querySelector(".d").classList.toggle("n");
+  document.querySelector("body").classList.toggle("night");
   let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"";
-  // document.querySelector(".dayTitle").classList.toggle("nightTitle");
-  // document.querySelector(".main").classList.toggle("night");
-  // document.querySelector(".output").classList.toggle("output-night");
-  // document.querySelector(".Night").classList.toggle("Day");
-  classLocal=document.querySelector(".d").classList.value;
+  classLocal=document.querySelector("body").classList.value;
   localStorage.setItem('modes', JSON.stringify(classLocal));
-  //let BodyClassName = JSON.parse(localStorage.getItem('modes'));
-  //BodyClassName = JSON.parse(localStorage.getItem('modes'));
   LocalMode();
 }
 
 document.querySelector(".Night").addEventListener("click", NightAndDay);
 
 
-// let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"";
-// localStorage.setItem('modes', JSON.stringify(classLocal));
-// let BodyClassName = JSON.parse(localStorage.getItem('modes'));
-
 function LocalMode() {
-  //let classLocal = localStorage.getItem('modes')?JSON.parse(localStorage.getItem('modes')):"d";
   let BodyClassName = JSON.parse(localStorage.getItem('modes'));
-  if(BodyClassName === "d n") {
+  if(BodyClassName === "day night") {
     document.querySelector(".dayTitle").classList.add("nightTitle");
-    document.querySelector(".main").classList.add("night");
+    document.querySelector(".day").classList.add("night");
     document.querySelector(".output").classList.add("output-night");
     document.querySelector(".Night").classList.add("Day");
+    document.querySelector(".input").classList.add("inputNight");
   } else {
     document.querySelector(".dayTitle").classList.remove("nightTitle");
-    document.querySelector(".main").classList.remove("night");
+    document.querySelector(".day").classList.remove("night");
     document.querySelector(".output").classList.remove("output-night");
     document.querySelector(".Night").classList.remove("Day");
+    document.querySelector(".input").classList.remove("inputNight");
   }
 }
+
+(function asdf() {
+  
+  x=1;
+  console.log(x);
+}());
+
+}());

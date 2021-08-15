@@ -1,4 +1,4 @@
-body.main {
+body.day {
     background-image: url('image/kelly-sikkema-00W-CT_859o-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,6 +67,10 @@ body.night {
     line-height: 50%;
  }
 
+ .inputNight {
+     color: #a7a7a7;
+ }
+
  input:focus{
      outline: none;
  }
@@ -84,34 +88,3 @@ body.night {
  .Day {
      color: white;
  }
-
-.n {
-    
-}
-
-
- /* input::placeholder{
-     font-family: serif;
-     color: #808080;
-     font-weight: bold;
- } */
-
-  /* #big-title {
-    font-family: handwriting;
-    color: #141414;
-    white-space : pre;
-    max-width: 100%;
-    font-size: 60px;
-    font-weight: 550;
-    text-align: center;
-    line-height: 40px;
-}  */
-
-/* @font-face {
-    font-family: 'specialSerif';
-    src: url('font/A.TTF') format('opentype');
-}
-@font-face {
-    font-family: 'handwriting';
-    src: url('font/BagindaScript.otf') format('opentype');
-} */
